@@ -5,4 +5,8 @@ memo/
 data/
 
 # submit
-exp/
+#exp/
+
+
+# cashe
+__pycache__/
