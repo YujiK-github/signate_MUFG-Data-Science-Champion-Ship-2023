@@ -2,8 +2,10 @@
 | - | - | - | - |
 | exp001 | 0.649981155994107 | 0.6579048 | baseline with lgb<br>"is_fraud?"のStratifiedKFold(n_splits=5) |
 | exp002 | 0.6514425113080011 | | baseline with lgb & polars<br>["is_fraud?", "card_id", "user_id"]のMultilabelStratifiedKFold(n_splits=5) |
+| exp003 | 0.6532026768642447 | 0.6532026768642447 | lgb add features<br>["is_fraud?", "card_id", "user_id"]のMultilabelStratifiedKFold(n_splits=5) |
 
-TODO: 回帰モデルとして解く
+TODO: 回帰モデルとして解く  
+TODO: user_idごとのモデル
 
 TODO: EDA中に考えついた特徴量たちの検証
 * merchant_id, merchant_city, merchant_state, mccごとの集約特徴量: その街、州の危険度を表現できるかも

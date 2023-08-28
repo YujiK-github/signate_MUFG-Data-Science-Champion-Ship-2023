@@ -1,4 +1,6 @@
 import os
+import math
+import time
 import random
 import numpy as np
 from tqdm.auto import tqdm
@@ -34,3 +36,17 @@ def get_score(y_true, y_pred, step: float = 0.01, return_threshold:bool = False)
         return best_score, best_threshold
     else:
         return best_score
+    
+    
+def asMinutes(s):
+    m = math.floor(s / 60)
+    s -= m * 60
+    return '%dm %ds' % (m, s)
+
+
+def timeSince(since, percent):
+    now = time.time()
+    s = now - since
+    es = s / (percent)
+    rs = es - s
+    return '%s (remain %s)' % (asMinutes(s), asMinutes(rs))
