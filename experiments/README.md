@@ -2,7 +2,8 @@
 | - | - | - | - |
 | exp001 | 0.649981155994107 | 0.6579048 | baseline with lgb<br>"is_fraud?"のStratifiedKFold(n_splits=5) |
 | exp002 | 0.6514425113080011 | | baseline with lgb & polars<br>["is_fraud?", "card_id", "user_id"]のMultilabelStratifiedKFold(n_splits=5) |
-| exp003 | 0.6532026768642447 | 0.6532026768642447 | lgb add features<br>["is_fraud?", "card_id", "user_id"]のMultilabelStratifiedKFold(n_splits=5) |
+| exp003 | 0.6532026768642447 | 0.6588847 | lgb add features<br>["is_fraud?", "card_id", "user_id"]のMultilabelStratifiedKFold(n_splits=5) |
+| exp004 | 0.6561070868244484 (threshold: 0.325) | 0.6581321 | exp003のn_splits増やした<br>["is_fraud?", "card_id", "user_id"]のMultilabelStratifiedKFold(n_splits=10) |
 
 TODO: 回帰モデルとして解く  
 TODO: user_idごとのモデル
