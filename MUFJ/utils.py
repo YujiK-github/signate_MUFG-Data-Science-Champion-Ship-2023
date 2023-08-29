@@ -14,14 +14,14 @@ def seed_everything(seed):
     
     
     
-def get_score(y_true, y_pred, step: float = 0.01, return_threshold:bool = False):
+def get_score(y_true, y_pred, step: float = 0.01, return_threshold:bool = False, disable:bool = True):
     """
     評価関数の入力となる検証用データ、及び学習に使用する学習用データの目的変数について、
     1: 不正利用あり, 0: 不正利用なしとします。
     """
     best_score = -np.inf
     j = 0
-    for i in tqdm(np.arange(0, 1, step), leave=False):
+    for i in tqdm(np.arange(0, 1, step), leave=False, disable=disable):
         y_pred_class = [1 if y > i else 0 for y in y_pred]
         score = f1_score(y_true, y_pred_class)
         if best_score < score:

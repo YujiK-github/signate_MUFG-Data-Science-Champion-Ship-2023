@@ -5,6 +5,7 @@
 | exp003 | 0.6532026768642447 | 0.6588847 | lgb add features<br>["is_fraud?", "card_id", "user_id"]のMultilabelStratifiedKFold(n_splits=5) |
 | exp004 | 0.6561070868244484 (threshold: 0.325) | 0.6581321 | exp003のn_splits増やした<br>["is_fraud?", "card_id", "user_id"]のMultilabelStratifiedKFold(n_splits=10) |
 | exp005 | 0.6606264292148846 (threshold: 0.35000000000000003) | 0.6691146 | それぞれのuser_idごとにモデルを作成した<br>["is_fraud?", "card_id"]のMultilabelStratifiedKFold(n_splits=5) |
+| exp006 | 0.6567866306993881 | 0.6551655 | それぞれのuser_idごとにモデルを作成した<br>["is_fraud?", "card_id"]のMultilabelStratifiedKFold(n_splits=5)<br>thresholdをそれぞれのuserごとにした |
 
 TODO: 回帰モデルとして解く  
 TODO: user_idごとのモデル
