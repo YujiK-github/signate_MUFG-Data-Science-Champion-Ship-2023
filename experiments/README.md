@@ -7,9 +7,17 @@
 | exp005 | 0.6606264292148846 (threshold: 0.35000000000000003) | 0.6691146 | それぞれのuser_idごとにモデルを作成した<br>["is_fraud?", "card_id"]のMultilabelStratifiedKFold(n_splits=5) |
 | exp006 | 0.6567866306993881 | 0.6551655 | それぞれのuser_idごとにモデルを作成した<br>["is_fraud?", "card_id"]のMultilabelStratifiedKFold(n_splits=5)<br>thresholdをそれぞれのuserごとにした |
 | exp007 | 0.6650696416960407 (threshold: 0.335) | 0.6736864 | 特徴量追加<br>それぞれのuser_idごとにモデルを作成した<br>["is_fraud?", "card_id"]のMultilabelStratifiedKFold(n_splits=5) |
+| exp008 |  |  | 再現性が取れない<br>特徴量追加<br>それぞれのuser_idごとにモデルを作成した<br>["is_fraud?", "card_id"]のMultilabelStratifiedKFold(n_splits=5) |
+| exp009 |  |  | polars使うと上手く再現性を確保できないのでpandasに書き換えた<br>特徴量追加<br>それぞれのuser_idごとにモデルを作成した<br>["is_fraud?", "card_id"]のMultilabelStratifiedKFold(n_splits=50) |
+| exp010 |  |  | それぞれのuser_idごと作ったfoldを利用して学習を行う<br>["is_fraud?", "card_id"]のMultilabelStratifiedKFold(n_splits=50) |
+| exp011 |  |  | それぞれのuser_idごと作ったfoldを利用してzipcodeごとに学習を行う<br>["is_fraud?", "card_id"]のMultilabelStratifiedKFold(n_splits=50) |
 
-TODO: 回帰モデルとして解く  
+
+TODO: 回帰モデルとして解く
 TODO: user_idごとのモデル
+TODO: user_idごとにfoldを作ってそれに従ってfold分けを行う。-> user_idごと、全体のモデル
+
+
 
 TODO: EDA中に考えついた特徴量たちの検証
 * merchant_id, merchant_city, merchant_state, mccごとの集約特徴量: その街、州の危険度を表現できるかも
