@@ -10,8 +10,8 @@
 | exp008 |  |  | 再現性が取れない<br>特徴量追加<br>それぞれのuser_idごとにモデルを作成した<br>["is_fraud?", "card_id"]のMultilabelStratifiedKFold(n_splits=5) |
 | exp009 | 0.6854378393428929 (threshold: 0.36) |  | polars使うと上手く再現性を確保できないのでpandasに書き換えた<br>特徴量追加<br>それぞれのuser_idごとにモデルを作成した<br>["is_fraud?", "card_id"]のMultilabelStratifiedKFold(n_splits=50) |
 | exp010 | 0.6619727891156463 (threshold: 0.34) |  | それぞれのuser_idごと作ったfoldを利用して学習を行う<br>["is_fraud?", "card_id"]のMultilabelStratifiedKFold(n_splits=50) |
-| exp011 | 0.6699534187888885 (threshold: 0.33) |  | それぞれのuser_idごと作ったfoldを利用してzipcodeごとに学習を行う<br>["is_fraud?", "card_id"]のMultilabelStratifiedKFold(n_splits=50) |
-| exp012 | 0.686212636105139 (threshold: 0.36) | | exp009~011のWeighted Average |
+| exp011 | 0.6699534187888885 (threshold: 0.33) | 0.6683350 | それぞれのuser_idごと作ったfoldを利用してzipcodeごとに学習を行う<br>["is_fraud?", "card_id"]のMultilabelStratifiedKFold(n_splits=50) |
+| exp012 | 0.686212636105139 (threshold: 0.36) | 0.6753102 | exp009~011のWeighted Average |
 | exp013 |  | | exp009~011のStacking |
 
 
