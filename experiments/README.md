@@ -14,6 +14,10 @@
 | exp012 | 0.686212636105139 (threshold: 0.36) | 0.6753102 | exp009~011のWeighted Average |
 | exp013 |  | | exp009~011のStacking |
 | exp014 | 0.6703914444368273 (threshold: 0.34) | 0.6746446 | それぞれのuser_idごとにモデルを作成した<br>["is_fraud?", "card_id"]のMultilabelStratifiedKFold(n_splits=10) |
+| exp015 | 0.6715859560009609 (threshold: 0.345) | 0.6754627 | それぞれのuser_idごとにモデルを作成した<br>["is_fraud?", "card_id"]のMultilabelStratifiedKFold(n_splits=15) |
+| exp016 | 0.675305926027774 (threshold: 0.345) | 0.6745533 | それぞれのuser_idごとにモデルを作成した<br>["is_fraud?", "card_id"]のMultilabelStratifiedKFold(n_splits=25) |
+
+
 
 
 TODO: 回帰モデルとして解く  
