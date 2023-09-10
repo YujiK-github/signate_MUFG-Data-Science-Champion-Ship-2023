@@ -13,6 +13,7 @@
 | exp011 | 0.6699534187888885 (threshold: 0.33) | 0.6683350 | それぞれのuser_idごと作ったfoldを利用してzipcodeごとに学習を行う<br>["is_fraud?", "card_id"]のMultilabelStratifiedKFold(n_splits=50) |
 | exp012 | 0.686212636105139 (threshold: 0.36) | 0.6753102 | exp009~011のWeighted Average |
 | exp013 |  | | exp009~011のStacking |
+| exp014 | 0.6703914444368273 (threshold: 0.34) | 0.6746446 | それぞれのuser_idごとにモデルを作成した<br>["is_fraud?", "card_id"]のMultilabelStratifiedKFold(n_splits=10) |
 
 
 TODO: 回帰モデルとして解く  
